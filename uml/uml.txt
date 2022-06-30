@@ -1,0 +1,43 @@
+// Cadastro de pessoas
+
+Main
+association Base
+---
+---
+---
+
+Base 
+composes Tarefa
+composes Pessoa
+---
+- tarefas: Tarefa[]
+- pessoas: Pessoa[]
+---
++ cadastraTarefa(nome: String, tempo: int, local: String): void
++ existeTarefa(nome: String): boolean
++ cadastraPessoa(numero: int, cor: String): void
++ listarPessoas(): String[]
+---
+
+Pessoa
+---
+- numero: int
+- cor: String
+---
++ Pessoa(numero: int, cor: String)
++ equals(o: Object): boolean
++ hashCode(): int
++ toString(): String
+---
+
+Tarefa
+---
+- nome: String
+- tempo: int
+- local: String
+---
++ Tarefa(nome: String, tempo: int, local: String)
++ equals(o: Obejct): boolean
++ rashCode(): int
+---
+
